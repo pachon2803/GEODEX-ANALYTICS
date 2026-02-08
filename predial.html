@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Topografía Predial Urbana y Rural en Armenia | GEODEX ANALYTICS S.A.S.</title>
+
+  <meta name="description"
+    content="Servicios profesionales de topografía predial urbana y rural: planos para escrituras, deslindes, sucesiones y medición de fincas. Cobertura en Quindío, Risaralda, Caldas, Tolima y Valle." />
+
+  <meta name="keywords"
+    content="topografía predial, planos para escritura, deslinde predial, topógrafo finca, agrimensura Colombia, topografía Quindío, topografía Risaralda, topografía Caldas" />
+
+  <!-- ICONOS -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER */
+    header {
+      background: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* LOGO */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 70px;
+      width: auto;
+      display: block;
+    }
+
+    /* BOTÓN WHATSAPP SUPERIOR */
+    .btn-whatsapp-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    .btn-whatsapp-top i {
+      font-size: 20px;
+    }
+
+    .btn-whatsapp-top:hover {
+      background: #128c7e;
+      transform: scale(1.05);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(26, 54, 93, 0.88),
+          rgba(26, 54, 93, 0.88)),
+        url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80");
+      background-size: cover;
+      background-position: center;
+      padding: 110px 0;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 820px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    /* BOTÓN PRINCIPAL */
+    .btn-primary {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 15px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #128c7e;
+      transform: scale(1.04);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #1a365d;
+    }
+
+    .section-title p {
+      color: #555;
+      font-size: 18px;
+      max-width: 750px;
+      margin: auto;
+      margin-top: 10px;
+    }
+
+    /* SERVICES GRID PERFECTO */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 25px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+      transition: 0.3s;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-card i {
+      font-size: 42px;
+      color: #3182ce;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #1a365d;
+    }
+
+    /* COVERAGE */
+    .coverage {
+      background: #f1f5f9;
+      text-align: center;
+    }
+
+    .coverage p {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* TRUST */
+    .trust-box {
+      background: #1a365d;
+      color: white;
+      padding: 55px 25px;
+      border-radius: 22px;
+      text-align: center;
+    }
+
+    .trust-box h2 {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1a365d;
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* RESPONSIVE GRID */
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-content {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .btn-whatsapp-top {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .logo-img {
+        height: 48px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-content">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="./img/logo_geodex_trans.png" alt="Logo GEODEX ANALYTICS" class="logo-img">
+        </a>
+      </div>
+
+      <!-- BOTÓN WHATSAPP ARRIBA -->
+      <a class="btn-whatsapp-top" target="_blank" rel="noopener"
+        href="https://wa.me/573132377722?text=Hola%20GEODEX,%20quiero%20cotizar%20un%20servicio%20de%20topografía%20predial.">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1>Topografía Predial Urbana y Rural</h1>
+        <p>
+          Planos para escrituras, deslindes, sucesiones y medición de fincas con precisión técnica.
+          Atención en Quindío, Risaralda, Caldas, Tolima y Valle del Cauca.
+        </p>
+
+        <a class="btn-primary" target="_blank" rel="noopener"
+          href="https://wa.me/573132377722?text=Hola%20GEODEX,%20quiero%20cotizar%20un%20servicio%20de%20topografía%20predial.">
+          📲 Cotizar por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Servicios Prediales Especializados</h2>
+          <p>Topografía enfocada en procesos legales, prediales y rurales que generan valor real.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+            <i class="fas fa-file-signature"></i>
+            <h3>Planos para Escrituras</h3>
+            <p>Documentación predial para compra-venta, subdivisiones y trámites notariales.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-ruler-combined"></i>
+            <h3>Deslindes y Linderos</h3>
+            <p>Determinación exacta de límites urbanos y rurales para evitar conflictos.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-tractor"></i>
+            <h3>Levantamientos en Fincas</h3>
+            <p>Medición de predios rurales para parcelación, herencias y formalización.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-users"></i>
+            <h3>Sucesiones Prediales</h3>
+            <p>Apoyo técnico en procesos legales de división, sucesión y actualización.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-mountain"></i>
+            <h3>Curvas de Nivel</h3>
+            <p>Planos topográficos con pendientes y representación del terreno para proyectos.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Catastro y Formalización</h3>
+            <p>Insumos técnicos para catastro multipropósito y actualización territorial.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COVERAGE -->
+    <section class="coverage">
+      <div class="container">
+        <div class="section-title">
+          <h2>Cobertura Regional</h2>
+          <p>Prestamos servicios en el Eje Cafetero y suroccidente colombiano:</p>
+        </div>
+        <p>📍 Quindío • Risaralda • Caldas • Tolima • Valle del Cauca</p>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section>
+      <div class="container">
+        <div class="trust-box">
+          <h2>Servicio técnico serio y responsable</h2>
+          <p>
+            Ideal para propietarios y profesionales que requieren topografía confiable para escrituras,
+            sucesiones y delimitación predial.
+          </p>
+          <br>
+
+          <a class="btn-primary" target="_blank" rel="noopener"
+            href="https://wa.me/573132377722?text=Hola%20GEODEX,%20quiero%20agendar%20una%20visita%20predial.">
+            ✅ Agendar Visita
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 GEODEX ANALYTICS S.A.S. | Topografía Predial Urbana y Rural</p>
+    <p>Armenia, Quindío — Cobertura Regional</p>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a class="whatsapp-float" target="_blank" rel="noopener"
+    href="https://wa.me/573132377722?text=Hola%20GEODEX,%20necesito%20un%20servicio%20predial.">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+
+</html>
